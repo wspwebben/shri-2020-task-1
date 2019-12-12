@@ -1,0 +1,47 @@
+$white: #fff;
+$black: #000;
+$blue: #07f;
+$red: #f33;
+$yellow: #fc0;
+
+$alpha-high: 0.6;
+$alpha-low: 0.3;
+
+$color-themes: (
+  "project-default": (
+    "default": $white,
+    "accent": $red,
+    "border": $black,
+    "text-primary": $black,
+    "text-secondary": rgba($black, $alpha-high),
+    "text-additional": rgba($black, $alpha-low),
+    "text-link": $blue
+  ),
+  "project-brand": (
+    "default": $black,
+    "accent": $white,
+    "border": $white,
+    "text-primary": $white,
+    "text-secondary": rgba($white, $alpha-high),
+    "text-additional": rgba($white, $alpha-low),
+    "text-link": $blue
+  ),
+  "project-inverse": (
+    "default": $blue,
+    "accent": $white,
+    "border": $white,
+    "text-primary": $white,
+    "text-secondary": rgba($white, $alpha-high),
+    "text-additional": rgba($white, $alpha-low),
+    "text-link": $white 
+  ),
+  "project-warning": (
+    "default": $red,
+    "accent": $white,
+    "border": $red,
+    "text-primary": $white,
+    "text-secondary": rgba($white, $alpha-high),
+    "text-additional": rgba($white, $alpha-low),
+    "text-link": $white
+  )
+);

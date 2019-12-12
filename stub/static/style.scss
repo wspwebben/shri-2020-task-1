@@ -1,0 +1,15 @@
+// use/forward syntax highlighting vscode extention 
+// vscode will have a native support in december
+// https://marketplace.visualstudio.com/items?itemName=wongjn.scss-modules
+// Ctrl + P | ext install wongjn.scss-modules
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
