@@ -1,2 +1,4 @@
+stub/.cache/*
+stub/dist/
 node_modules
 build/*
