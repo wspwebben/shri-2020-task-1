@@ -1,0 +1,55 @@
+@use "../base/typography" as *;
+@use "../base/variables" as *;
+@use "../base/adaptive" as *;
+@use "../base/colors" as *;
+
+.theme {
+
+  // Модификаторы:
+
+  // Цвета всех элементов интерфейса
+  &_color {
+    
+    @each $theme, $colors in $color-themes {
+      &_#{$theme} {
+        @each $color-name, $color in $colors {
+          --color-#{$color-name}: #{$color};
+        }
+      }
+    }
+  }
+
+  // Размеры отступов между элементами интерфейса
+  &_size {
+    
+    &_default {
+      @each $size, $font-size in $font-sizes {
+        --fz-#{$size}: #{$font-size};
+      }
+      
+      @each $size, $line-height in $line-heights {
+        --lh-#{$size}: #{$line-height};
+      }
+    }
+  }
+
+  &_space {
+
+    &_default {
+      @each $size, $space in $spaces {
+        --space-#{$size}: #{$space};
+      } 
+    }
+  }
+
+  &_gap {
+
+    &_small {
+      --gap: var(--space-s);
+
+      @include media-desktop {
+        --gap: var(--space-xl);
+      }
+    }
+  }
+}
