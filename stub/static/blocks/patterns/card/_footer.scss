@@ -6,9 +6,9 @@
 
   &_distribute {
     $alignments: (
-      'beetween': 'space-between',
-      'center': 'center',
-      'right': 'flex-end'
+      'beetween': space-between,
+      'center': center,
+      'right': flex-end
     );
 
     @each $mod-name, $alignment in $alignments {
