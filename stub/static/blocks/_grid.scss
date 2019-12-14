@@ -1,0 +1,65 @@
+@use "../base/adaptive" as *;
+
+.grid {
+  display: block;
+
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-col-count, 12), 1fr);
+    column-gap: var(--grid-col-gap, 0);
+    row-gap: var(--grid-row-gap, 0);
+  }
+
+  &_m-columns {
+    $cols: (10, 12);
+
+    @each $col in $cols {
+      &_#{$col} {
+        --grid-col-count: #{$col};
+      }
+    }
+  }
+
+  &_col-gap {
+
+    &_full {
+      --grid-col-gap: var(--gap);
+    }
+
+    &_half {
+      --grid-col-gap: calc(var(--gap) / 2)
+    }
+
+    &_two-thirds {
+      --grid-col-gap: calc(var(--gap) * 2 / 3)
+    }
+  }
+
+  &_row-gap {
+
+
+    &_full {
+      --grid-row-gap: var(--gap);
+    }
+
+    &__half {
+      --grid-row-gap: calc(var(--gap) / 2)
+    }
+  }
+
+
+
+  &__fraction {
+    grid-column-end: span var(--grid-span, 1);
+
+    &_m-col {
+      $spans: (2, 3, 4, 5, 8);
+
+      @each $span in $spans {
+        &_#{$span} {
+          --grid-span: #{$span};
+        }
+      }
+    }
+  }
+}

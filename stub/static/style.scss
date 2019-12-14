@@ -3,15 +3,7 @@
 // https://marketplace.visualstudio.com/items?itemName=wongjn.scss-modules
 // Ctrl + P | ext install wongjn.scss-modules
 
+@use "base/base";
 @use "blocks/theme";
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
+@use "blocks/layout";
+@use "blocks/grid";
