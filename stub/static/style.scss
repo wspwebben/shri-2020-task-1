@@ -3,6 +3,7 @@
 // https://marketplace.visualstudio.com/items?itemName=wongjn.scss-modules
 // Ctrl + P | ext install wongjn.scss-modules
 
+@use 'base/root-vars';
 @use "base/base";
 
 // Слой темы

@@ -1,0 +1,5 @@
+$border-width: 3px !default;
+
+:root {
+  --border-width: #{$border-width};
+}
