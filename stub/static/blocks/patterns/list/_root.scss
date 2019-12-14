@@ -1,0 +1,21 @@
+.list {
+  position: relative;
+  
+  &_border {
+
+    &_all {
+
+      border: var(--border-width) solid var(--color-border);
+    }
+  }
+
+  &_view {
+    $colors: ('default');
+
+    @each $color in $colors {
+      &_#{$color} {
+        background-color: var(--color-#{$color});
+      }
+    }
+  }
+}

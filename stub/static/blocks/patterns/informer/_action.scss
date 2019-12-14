@@ -1,0 +1,27 @@
+.informer__action {
+  display: flex;
+
+  &_distribute {
+    $alignments: (
+      'default': unset,
+      'beetween': space-between,
+      'center': center,
+    );
+
+    @each $mod-name, $alignment in $alignments {
+      &_#{$mod-name} {
+        justify-content: $alignment;
+      }
+    }
+  }
+
+  &_space-a {
+    $spacers: ('xl', 'xxl');
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        padding: var(--space-#{$spacer});
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.form__item {
+  display: flex;
+
+  &_border {
+
+    &_bottom {
+      
+      &:not(:last-child) {
+        border-bottom: var(--color-border);
+      }
+    }
+  }
+
+  &_distribute {
+
+    &_between {
+      justify-content: space-between;
+    }
+  }
+
+  &_vertical-align {
+
+    &_center {
+      align-items: center;
+    }
+  }
+
+  &_indent-b {
+    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        margin-bottom: var(--space-#{$spacer});
+      }
+    }
+  }
+
+  &_space-h {
+    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        padding-left: var(--space-#{$spacer});
+        padding-right: var(--space-#{$spacer});
+      }
+    }
+  }
+
+  &_space-v {
+    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        padding-top: var(--space-#{$spacer});
+        padding-bottom: var(--space-#{$spacer});
+      }
+    }
+  }
+}
