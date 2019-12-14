@@ -1,22 +1,12 @@
+@use "../../../base/helpers" as *;
+
 .icon-plus__icon {
 
   &_indent-r {
-    $spacers: ('s', 'm');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-right: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('s', 'm'), 'margin-right');
   }
 
   &_indent-l {
-    $spacers: ('l');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-left: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('l'), 'margin-left');
   }  
 }

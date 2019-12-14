@@ -1,23 +1,12 @@
+@use "../../../base/helpers" as *;
+
 .section {
 
   &_indent-b {
-    $spacers: ('xxl', 'xxxxl');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('xxl', 'xxxxl'), 'margin-bottom');
   }
 
   &_space-v {
-    $spacers: ('xxl', 'xxxxl');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        padding-top: var(--space-#{$spacer});
-        padding-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('xxl', 'xxxxl'), ('padding-top','padding-bottom'));
   }
 }

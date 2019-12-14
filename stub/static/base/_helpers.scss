@@ -1,0 +1,17 @@
+@use "sass:meta" as *;
+
+@mixin set-space($spaces, $properties) {
+  $type: type-of($properties);
+
+  @each $space in $spaces {
+    &_#{$space} {
+      @if $type == 'string' {
+        #{$properties}: var(--space-#{$space});
+      } @else if $type == 'list' {
+        @each $property in $properties {
+          #{$property}: var(--space-#{$space});
+        }
+      }
+    }
+  }
+}

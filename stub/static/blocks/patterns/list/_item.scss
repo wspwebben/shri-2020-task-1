@@ -1,3 +1,5 @@
+@use "../../../base/helpers" as *;
+
 .list__item {
   display: flex;
 
@@ -29,43 +31,19 @@
   }
 
   &_indent-t {
-    $spacers: ('m');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-top: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('m'), 'margin-top');
   }
 
   &_indent-b {
-    $spacers: ('s', 'm', 'l', 'xl');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('s', 'm', 'l', 'xl'), 'margin-bottom');
   }
 
 
   &_space-a {
-    $spacers: ('s');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        padding: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('s'), 'padding');
   }
 
   &_space-b {
-    $spacers: ('m');
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        padding-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(('m'), 'padding-bottom');
   }
 }

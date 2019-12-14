@@ -1,3 +1,5 @@
+@use "../../../base/helpers" as *;
+
 .layout__container {
   max-width: var(--layout-size);
   width: 100%;
@@ -24,23 +26,10 @@
   }
 
   &_space-v {
-    $spacers: ("xxxxl", "xxxxxl");
-
-    @each $size in $spacers {
-      &_#{$size} { 
-        padding-top: var(--space-#{$size});
-        padding-bottom: var(--space-#{$size});
-      }
-    }
+    @include set-space(("xxxxl", "xxxxxl"), ('padding-top', 'padding-bottom'));
   }
 
   &_indent-b {
-    $spacers: ("xxl", "xxxxl");
-
-    @each $size in $spacers {
-      &_#{$size} { 
-        margin-bottom: var(--space-#{$size});
-      }
-    }
+    @include set-space(("xxl", "xxxxl"), 'margin-bottom');
   }
 }

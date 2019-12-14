@@ -1,3 +1,5 @@
+@use "../../../base/helpers" as *;
+
 .form__item {
   display: flex;
 
@@ -26,34 +28,14 @@
   }
 
   &_indent-b {
-    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        margin-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl"), 'margin-bottom');
   }
 
   &_space-h {
-    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        padding-left: var(--space-#{$spacer});
-        padding-right: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl"), ('padding-left', 'padding-right'));
   }
 
   &_space-v {
-    $spacers: ("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl");
-
-    @each $spacer in $spacers {
-      &_#{$spacer} {
-        padding-top: var(--space-#{$spacer});
-        padding-bottom: var(--space-#{$spacer});
-      }
-    }
+    @include set-space(("xxxs", "xxs", "s", "m", "l", "xl", "xxl", "xxxl", "xxxxl"), ('padding-top', 'padding-bottom'));
   }
 }
