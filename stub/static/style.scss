@@ -4,6 +4,12 @@
 // Ctrl + P | ext install wongjn.scss-modules
 
 @use "base/base";
-@use "blocks/theme";
-@use "blocks/layout";
-@use "blocks/grid";
+
+// Слой темы
+@use "blocks/theme/theme";
+
+// Слой каркаса 
+@use "blocks/frame/layout";
+@use "blocks/frame/grid";
+
+// Слой паттернов
