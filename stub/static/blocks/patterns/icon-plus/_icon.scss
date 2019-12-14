@@ -1,0 +1,22 @@
+.icon-plus__icon {
+
+  &_indent-r {
+    $spacers: ('s', 'm');
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        margin-right: var(--space-#{$spacer});
+      }
+    }
+  }
+
+  &_indent-l {
+    $spacers: ('l');
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        margin-left: var(--space-#{$spacer});
+      }
+    }
+  }  
+}
