@@ -1,4 +1,5 @@
 @use "sass:meta" as *;
+@use "sass:map" as *;
 
 @mixin set-space($spaces, $properties) {
   $type: type-of($properties);
@@ -12,6 +13,15 @@
           #{$property}: var(--space-#{$space});
         }
       }
+    }
+  }
+}
+
+@mixin set-size($sizes) {
+  @each $mod, $size in $sizes {
+    &_#{$mod} {
+      width: nth($size, 1);
+      height: nth($size, 2);
     }
   }
 }

@@ -1,0 +1,26 @@
+@use "../../../base/colors" as *;
+@use "../../../base/helpers" as *;
+
+.brand-logo {
+
+  &_name {
+
+    @each $name, $color in $colors-logo {
+
+      &_#{$name} {
+        background-color: $color;
+      }
+    }
+  }
+
+  &_size {
+
+    @include set-size((
+      "xxs": (24px, 24px),
+      "xs": (32px, 32px),
+      "s": (40px, 40px),
+      "m": (60px, 60px),
+      "l": (80px, 80px),
+    ));
+  }
+}

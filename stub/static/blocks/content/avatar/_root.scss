@@ -1,0 +1,11 @@
+@use "../../../base/helpers" as *;
+
+.avatar {
+
+  &_size {
+
+    @include set-size((
+      'm': (60px, 60px),
+    ));
+  }
+}
