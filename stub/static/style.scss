@@ -10,8 +10,8 @@
 @use "blocks/theme/theme";
 
 // Слой каркаса 
-@use "blocks/frame/layout";
-@use "blocks/frame/grid";
+@use "blocks/frame/layout/style" as *;
+@use "blocks/frame/grid/style" as *;
 
 // Слой паттернов
-@use "blocks/patterns/card";
+@use "blocks/patterns/card/style" as *;

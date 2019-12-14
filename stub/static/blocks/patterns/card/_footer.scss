@@ -1,0 +1,31 @@
+.card__footer {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+
+  &_distribute {
+    $alignments: (
+      'beetween': 'space-between',
+      'center': 'center',
+      'right': 'flex-end'
+    );
+
+    @each $mod-name, $alignment in $alignments {
+      &_#{$mod-name} {
+        justify-content: $alignment;
+      }
+    }
+  }
+
+
+  &_space-a {
+    $spacers: ('m', 'l', 'xl', 'xxl');
+
+    @each $spacer in $spacers {
+      &_#{$spacer} {
+        padding: var(--space-#{$spacer});
+      }
+    }
+  }
+}

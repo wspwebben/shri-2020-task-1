@@ -1,4 +1,4 @@
-@use "../../base/adaptive" as *;
+@use "../../../base/adaptive" as *;
 
 .grid {
   display: block;
@@ -37,29 +37,12 @@
 
   &_row-gap {
 
-
     &_full {
       --grid-row-gap: var(--gap);
     }
 
     &__half {
       --grid-row-gap: calc(var(--gap) / 2)
-    }
-  }
-
-
-
-  &__fraction {
-    grid-column-end: span var(--grid-span, 1);
-
-    &_m-col {
-      $spans: (2, 3, 4, 5, 8);
-
-      @each $span in $spans {
-        &_#{$span} {
-          --grid-span: #{$span};
-        }
-      }
     }
   }
 }
