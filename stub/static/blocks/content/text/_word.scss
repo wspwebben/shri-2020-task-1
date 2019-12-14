@@ -1,0 +1,15 @@
+@use "../../../base/typography" as *;
+
+.text__word {
+  display: inline-block;
+  height: var(--text-height);
+  background-color: currentColor;
+
+  &_width {
+    @each $word-size in $word-sizes {
+      &_#{$word-size} {
+        width: var(--text-width-#{$word-size});
+      }
+    }
+  }
+}

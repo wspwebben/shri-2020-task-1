@@ -1,0 +1,60 @@
+@use "../../../base/helpers" as *;
+@use "../../../base/typography" as *;
+@use "sass:list" as *;
+
+.text {
+
+  &_align {
+
+    &_center {
+      text-align: center;
+    }
+  }
+
+  &_size {
+    $sizes: (
+      's': (20px, 48px, 100px),
+      'm': (24px, 56px, 114px),
+      'l': (28px, 68px, 138px),
+      'xl': (32px, 74px, 154px),
+      'xxl': (36px, 88px, 184px),
+    );
+
+    @each $text-mod, $text-size in $sizes {
+
+      &_#{$text-mod} {
+        --text-height: var(--fz-#{$text-mod});  
+
+        @each $word-mod, $word-size in zip($word-sizes, $text-size) {
+          --text-width-#{$word-mod}: #{$word-size};
+        }
+
+      }
+    }
+  }
+
+  &_type {
+    $spaces: (
+      'h1': 18px 0 24px,
+      'h2': 45px 0 21px,
+      'h3': 42px 0 0,
+      'p': 15px 0 21px,
+    );
+
+    @each $type, $space in $spaces {
+      &_#{$type} {
+        margin: $space;
+      }
+    }
+  }
+
+  &_view {
+    $colors: ('primary', 'secondary', 'ghost', 'link');
+
+    @each $color in $colors {
+      &_#{$color} {
+        color: var(--color-text-#{$color});
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ $color-themes: (
     "border": $black,
     "text-primary": $black,
     "text-secondary": rgba($black, $alpha-high),
-    "text-additional": rgba($black, $alpha-low),
+    "text-ghost": rgba($black, $alpha-low),
     "text-link": $blue
   ),
   "project-brand": (
@@ -23,7 +23,7 @@ $color-themes: (
     "border": $white,
     "text-primary": $white,
     "text-secondary": rgba($white, $alpha-high),
-    "text-additional": rgba($white, $alpha-low),
+    "text-ghost": rgba($white, $alpha-low),
     "text-link": $white
   ),
   "project-inverse": (
@@ -32,7 +32,7 @@ $color-themes: (
     "border": $white,
     "text-primary": $white,
     "text-secondary": rgba($white, $alpha-high),
-    "text-additional": rgba($white, $alpha-low),
+    "text-ghost": rgba($white, $alpha-low),
     "text-link": $blue 
   ),
   "project-warning": (
@@ -41,7 +41,7 @@ $color-themes: (
     "border": $red,
     "text-primary": $white,
     "text-secondary": rgba($white, $alpha-high),
-    "text-additional": rgba($white, $alpha-low),
+    "text-ghost": rgba($white, $alpha-low),
     "text-link": $white
   )
 );
