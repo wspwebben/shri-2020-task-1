@@ -10,7 +10,7 @@ $alpha-low: 0.3;
 $color-themes: (
   "project-default": (
     "default": $white,
-    "accent": $red,
+    "accent": $yellow,
     "border": $black,
     "text-primary": $black,
     "text-secondary": rgba($black, $alpha-high),
@@ -18,22 +18,22 @@ $color-themes: (
     "text-link": $blue
   ),
   "project-brand": (
-    "default": $black,
-    "accent": $white,
-    "border": $white,
-    "text-primary": $white,
-    "text-secondary": rgba($white, $alpha-high),
-    "text-additional": rgba($white, $alpha-low),
-    "text-link": $blue
-  ),
-  "project-inverse": (
     "default": $blue,
     "accent": $white,
     "border": $white,
     "text-primary": $white,
     "text-secondary": rgba($white, $alpha-high),
     "text-additional": rgba($white, $alpha-low),
-    "text-link": $white 
+    "text-link": $white
+  ),
+  "project-inverse": (
+    "default": $black,
+    "accent": $white,
+    "border": $white,
+    "text-primary": $white,
+    "text-secondary": rgba($white, $alpha-high),
+    "text-additional": rgba($white, $alpha-low),
+    "text-link": $blue 
   ),
   "project-warning": (
     "default": $red,
