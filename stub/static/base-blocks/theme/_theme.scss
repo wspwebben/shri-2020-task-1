@@ -2,6 +2,7 @@
 @use "../../base/variables" as *;
 @use "../../base/adaptive" as *;
 @use "../../base/colors" as *;
+@use "../../base/images" as *;
 
 .theme {
 
@@ -15,6 +16,12 @@
         @each $color-name, $color in $colors {
           --color-#{$color-name}: #{$color};
         }
+      }
+    }
+
+    @each $theme, $image in $image-themes {
+      &_#{$theme} {
+        --image-mock: #{$image};
       }
     }
   }
