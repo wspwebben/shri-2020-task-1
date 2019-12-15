@@ -1,0 +1,28 @@
+$total-height: 32px;
+$button-height: 24px;
+$border-width: 2px;
+$space: ($total_height - $button_height) / 2 - $border-width;
+
+.onoffswitch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: $space;
+  width: 97px;
+  height: 32px;
+
+  --border-width: #{$border-width};
+  border: var(--border-width) solid var(--color-border);
+
+  &_checked {
+    justify-content: flex-end;
+  }
+}
+
+.onoffswitch__button {
+  $size: $button-height;
+
+  width: $size;
+  height: $size;
+  background-color: var(--color-border);
+}

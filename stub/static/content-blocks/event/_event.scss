@@ -1,0 +1,16 @@
+.event {
+  min-height: 400px;
+}
+
+.event__preview {
+  display: flex;
+  margin-bottom: var(--space-xxl);
+
+  > *:not(:last-child) {
+    margin-right: var(--space-xs);
+  }
+}
+
+.event__title {
+  margin-bottom: var(--space-s);
+}
