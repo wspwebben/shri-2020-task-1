@@ -9,7 +9,7 @@
     &_bottom {
        
       &:not(:last-child) {
-        border-bottom: var(--color-border);
+        border-bottom: var(--border-width) solid var(--color-border);
       }
     }
   }

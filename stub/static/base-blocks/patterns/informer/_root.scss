@@ -1,5 +1,7 @@
 .informer {
   position: relative;
+  display: flex;
+  flex-direction: column;
   
   &_border {
 

@@ -1,3 +1,14 @@
 .payment {
   --border-width: 3px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.payment__content {
+  flex-grow: 1;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }

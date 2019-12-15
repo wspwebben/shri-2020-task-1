@@ -1,3 +1,12 @@
 .warning {
   min-height: 335px;
+  height: 100%;
+}
+
+.warning .placeholder,
+.warning__placeholder {
+  $indent: var(--space-m);
+
+  margin-top: $indent;
+  margin-bottom: $indent;
 }
