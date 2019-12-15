@@ -6,26 +6,4 @@
 @use 'base/root-vars';
 @use "base/base";
 
-// Слой темы
-@use "blocks/theme/theme";
-
-// Слой каркаса 
-@use "blocks/frame/layout/style" as *;
-@use "blocks/frame/grid/style" as *;
-
-// Слой паттернов
-@use "blocks/patterns/card/style" as *;
-@use "blocks/patterns/form/style" as *;
-@use "blocks/patterns/informer/style" as *;
-@use "blocks/patterns/list/style" as *;
-@use "blocks/patterns/icon-plus/style" as *;
-@use "blocks/patterns/section/style" as *;
-
-// Слой контентных блоков
-@use "blocks/content/text/style" as *;
-@use "blocks/content/avatar/style" as *;
-@use "blocks/content/brand-logo/style" as *;
-@use "blocks/content/placeholder/style" as *;
-@use "blocks/content/button/style" as *;
-@use "blocks/content/input/style" as *;
-@use "blocks/content/image/style" as *;
+@use "base-blocks/internal" as *;

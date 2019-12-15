@@ -1,0 +1,23 @@
+// Слой темы
+@use "base-blocks/theme/theme";
+
+// Слой каркаса 
+@use "base-blocks/frame/layout/style" as *;
+@use "base-blocks/frame/grid/style" as *;
+
+// Слой паттернов
+@use "base-blocks/patterns/card/style" as *;
+@use "base-blocks/patterns/form/style" as *;
+@use "base-blocks/patterns/informer/style" as *;
+@use "base-blocks/patterns/list/style" as *;
+@use "base-blocks/patterns/icon-plus/style" as *;
+@use "base-blocks/patterns/section/style" as *;
+
+// Слой контентных блоков
+@use "base-blocks/content/text/style" as *;
+@use "base-blocks/content/avatar/style" as *;
+@use "base-blocks/content/brand-logo/style" as *;
+@use "base-blocks/content/placeholder/style" as *;
+@use "base-blocks/content/button/style" as *;
+@use "base-blocks/content/input/style" as *;
+@use "base-blocks/content/image/style" as *;
