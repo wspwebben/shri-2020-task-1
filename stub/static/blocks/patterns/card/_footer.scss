@@ -9,33 +9,21 @@
   display: flex;
 
   &_distribute {
-    $alignments: (
+    @include set-align((
       'beetween': space-between,
       'center': center,
       'right': flex-end
-    );
-
-    @each $mod-name, $alignment in $alignments {
-      &_#{$mod-name} {
-        justify-content: $alignment;
-      }
-    }
+    ), 'justify-content');
   }
 
-
   &_vertical-align {
-    $alignments: (
+    @include set-align((
       'top': flex-start,
       'center': center,
       'bottom': flex-end
-    );
-
-    @each $mod-name, $alignment in $alignments {
-      &_#{$mod-name} {
-        flex-direction: column;
-        justify-content: $alignment;
-      }
-    }
+    ), 'align-items') {
+      flex-direction: column;
+    };
   }
 
 

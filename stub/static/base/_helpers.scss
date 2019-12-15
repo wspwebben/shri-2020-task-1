@@ -17,6 +17,17 @@
   }
 }
 
+// @content allows to set common styles for each modifiers
+@mixin set-align($alignments, $property) {
+  @each $mod, $value in $alignments {
+    &_#{$mod} {
+      @content;
+      
+      #{$property}: $value;
+    }
+  }
+}
+
 @mixin set-size($sizes) {
   @each $mod, $size in $sizes {
     &_#{$mod} {

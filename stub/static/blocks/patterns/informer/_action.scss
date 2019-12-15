@@ -4,17 +4,11 @@
   display: flex;
 
   &_distribute {
-    $alignments: (
+    @include set-align((
       'default': unset,
       'beetween': space-between,
       'center': center,
-    );
-
-    @each $mod-name, $alignment in $alignments {
-      &_#{$mod-name} {
-        justify-content: $alignment;
-      }
-    }
+    ), 'justify-content');
   }
 
   &_space-a {

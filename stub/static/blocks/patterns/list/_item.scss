@@ -19,15 +19,9 @@
   }
 
   &_distribute {
-    $alignments: (
+    @include set-align((
       'beetween': space-between,
-    );
-
-    @each $mod-name, $alignment in $alignments {
-      &_#{$mod-name} {
-        justify-content: $alignment;
-      }
-    }
+    ), 'justify-content');
   }
 
   &_indent-t {
