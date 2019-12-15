@@ -1,6 +1,7 @@
 @use "../../../base/helpers" as *;
 
 .input {
+  border: var(--border-width) solid var(--color-border);
 
   &_size {
     $default-width: 100%;

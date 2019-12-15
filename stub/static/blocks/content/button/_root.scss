@@ -1,6 +1,7 @@
 @use "../../../base/helpers" as *;
 
 .button {
+  background-color: var(--color-accent);
 
   &_size {
     $default-width: 200px;

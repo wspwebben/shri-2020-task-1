@@ -2,6 +2,8 @@
 
 .card__footer {
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
 
   display: flex;
@@ -15,6 +17,22 @@
 
     @each $mod-name, $alignment in $alignments {
       &_#{$mod-name} {
+        justify-content: $alignment;
+      }
+    }
+  }
+
+
+  &_vertical-align {
+    $alignments: (
+      'top': flex-start,
+      'center': center,
+      'bottom': flex-end
+    );
+
+    @each $mod-name, $alignment in $alignments {
+      &_#{$mod-name} {
+        flex-direction: column;
         justify-content: $alignment;
       }
     }
