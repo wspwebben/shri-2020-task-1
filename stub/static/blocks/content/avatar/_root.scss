@@ -1,6 +1,8 @@
 @use "../../../base/helpers" as *;
 
 .avatar {
+  color: var(--color-text-primary);
+  background-color: currentColor;
 
   &_size {
 

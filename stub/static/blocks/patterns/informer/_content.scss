@@ -2,13 +2,18 @@
 
 .informer__content {
   display: flex;
+  flex-grow: 1;
 
   &_distribute {
     @include set-align((
       'default': unset,
       'beetween': space-between,
-      'center': center,
     ), 'justify-content');
+
+    &_center {
+      flex-direction: column;
+      align-items:  center;
+    }
   }
 
   &_space-a {

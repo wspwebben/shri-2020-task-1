@@ -2,11 +2,12 @@
 
 .form__item {
   display: flex;
+  flex-direction: column;
 
   &_border {
 
     &_bottom {
-      
+       
       &:not(:last-child) {
         border-bottom: var(--color-border);
       }
@@ -16,6 +17,7 @@
   &_distribute {
 
     &_between {
+      flex-direction: row;
       justify-content: space-between;
     }
   }
