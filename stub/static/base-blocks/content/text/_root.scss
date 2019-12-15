@@ -3,6 +3,7 @@
 @use "sass:list" as *;
 
 .text {
+  font-size: 0;
 
   &_align {
 
@@ -21,9 +22,10 @@
     );
 
     @each $text-mod, $text-size in $sizes {
-
+      
       &_#{$text-mod} {
         --text-height: var(--fz-#{$text-mod});  
+        --text-space: calc((var(--lh-#{$text-mod}) - var(--text-height)) / 2);
 
         @each $word-mod, $word-size in zip($word-sizes, $text-size) {
           --text-width-#{$word-mod}: #{$word-size};

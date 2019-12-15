@@ -4,6 +4,7 @@
   display: inline-block;
   height: var(--text-height);
   background-color: currentColor;
+  margin: var(--text-space) 0;
 
   &_width {
     @each $word-size in $word-sizes {
