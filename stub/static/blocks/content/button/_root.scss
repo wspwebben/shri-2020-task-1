@@ -1,0 +1,23 @@
+@use "../../../base/helpers" as *;
+
+.button {
+
+  &_size {
+    $default-width: 200px;
+
+    @include set-size((
+      's': ($default-width, 24px),
+      'm': ($default-width, 32px),
+      'l': ($default-width, 42px),
+      'xl': ($default-width, 56px),
+      'xxl': ($default-width, 64px),
+    ));
+  }
+
+  &_width {
+    
+    &_full {
+      width: 100%;
+    }
+  }
+}

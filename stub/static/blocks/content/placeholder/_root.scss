@@ -1,0 +1,22 @@
+@use "../../../base/helpers" as *;
+
+.placeholder {
+
+  &_size {
+
+    @include set-size((
+      'm': (72px, 72px),
+    ));
+  }
+
+  &_view {
+    $colors: ('primary');
+
+    @each $color in $colors {
+      &_#{$color} {
+        color: var(--color-text-#{$color});
+        background-color: currentColor;
+      }
+    }
+  }
+}
